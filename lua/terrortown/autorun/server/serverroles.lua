@@ -13,7 +13,7 @@ function reload_role_menu(ply, cmd, args, argStr)
     net.Start("role_descriptions_update")
     net.WriteString(role_string)
     net.Broadcast()
-
+    print("Broadcasting roles")
     -- Todo: Make editable from within game by admins
 end
 
