@@ -131,18 +131,27 @@ function getRoleStrs(roleName, role_info)
     return desc, color, color_str, icon
 end
 
-
-bind.Register("RoleDescriptionsBind", startMenu, nil, "Role Descriptions", "Role Decsriptions Menu", KEY_LALT)
-
 net.Receive( "role_descriptions_update", function()
+    print("Received roles from server")
+
     local role_string = net.ReadString()
     file.Write("roles.json", role_string)
     write_roles()
+
+    bind.Register("RoleDescriptionsBind", startMenu, nil, "Role Descriptions", "Role Decsriptions Menu", KEY_LALT)
+
+    hook.Add("TTT2UpdateSubrole", "UpdateRoleMenu", function ()
+        write_roles()
+    end )
 end )
 
-hook.Add("TTT2UpdateSubrole", "UpdateRoleMenu", function ()
-    write_roles()
-end )
+local roles_loaded = false;
 
-net.Start("role_descriptions_update_request")
-net.SendToServer()
+hook.Add("InitPostEntity", "role_request_hook", function ()
+    if not roles_loaded then 
+        print("Requesting roles from server")
+        net.Start("role_descriptions_update_request")
+        net.SendToServer()
+        roles_loaded = true
+    end
+end )

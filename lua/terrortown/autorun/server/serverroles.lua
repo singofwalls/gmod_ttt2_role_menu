@@ -1,5 +1,7 @@
 resource.AddSingleFile("data/roles.json")
+print("Setting up role network")
 util.AddNetworkString( "role_descriptions_update" )
+util.AddNetworkString( "role_descriptions_update_request" )
 CreateConVar( "roledescriptions", "{}", FCVAR_ARCHIVE)
 
 function reload_role_menu(ply, cmd, args, argStr)
@@ -26,7 +28,8 @@ end
 concommand.Add("reload_role_menu", reload_role_menu, nil, "Reloads and resends the json file containing roles and descriptions to the clients", FCVAR_PROTECTED)
 
 net.Receive( "role_descriptions_update_request", function(len, ply)
-    if ( IsValid( ply ) and ply:IsPlayer() ) then
+    print("update request from", ply:GetName())
+    if ( IsValid( ply ) ) then
         reload_role_menu(ply)
     end
 end )
