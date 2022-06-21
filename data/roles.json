@@ -37,8 +37,8 @@
     "Detective": "An innocent player and leader of the group. Find and kill all the traitors or other non-innocent players. You have a shop (access with 'C' by default) from which you can purchase useful tools.",
     "Traitor": "An evil player. Find and kill all the innocents or other non-traitor players. You have a shop (access with 'C' by default) from which you can purchase useful tools.",
     "Changeling": "On its own team. The Changeling has a Mutator which allows them to steal the role of any corpse. Once they have taken the role, they remain a Changeling (they are the role they have stolen, but they remain on their own Changeling team). They also keep the Changeling's power and can change roles again as is convenient. A Changeling who has stolen a role is seen by others of that role as a teammate, even though the Changeling must eventually kill everyone.",
-    "Doppelganger": "On its own team. The Doppelganger can press E on another player to steal their role, thus gaining their role's abilities. The victim becomes a normal Innocent. The Doppelganger always remains on its own team, even after role swaps. A Doppelganger who has stolen a role is seen by others of that role as a teammate, even though the Doppelganger must eventually kill everyone.",
-    "Mimic": "On no team. The Mimic can press E on another player to steal their role, thus gaining their role's abilities and team. The victim becomes a normal Innocent.",
+    "Doppelganger": "On its own team. The Doppelganger can press E on another player to copy their role, thus gaining their role's abilities. The Doppelganger always remains on its own team, even after role swaps. A Doppelganger who has copied a role is seen by others of that role as a teammate, even though the Doppelganger must eventually kill everyone.",
+    "Mimic": "On no team. The Mimic can press E on another player to copy their role, thus gaining their role's abilities and team.",
     "Banker": "A special Detective. The Banker recieves a credit any time someone else spends a credit.",
     "Ghost": "A special Innocent. When dead, a ghostly version of their character eerily follows their location while they're spectating.",
     "Drunk": "A player with no team. Each time another player is killed, there is a chance (which increases with each dead player), that the Drunk will Sober Up and assume the role of the dead player (after a timer).",
@@ -58,7 +58,7 @@
     "Elderly": "A neutral role who wins whenever someone else wins. The Elderly simply has very little health and wants only to survive til the end, by whatever means.",
     "Cursed": "A game of tag! You cannot win while Cursed. Pass the role off to another player using your tag deagle or by pressing E on someone. These actions swap your roles with the tagged player. You cannot be tagged by whoever you have just tagged.",
     "Clown": "A Jester role who, in a cloud of confetti, becomes a lone villain once only one team remains. Until then, the Clown cannot deal damage.",
-    "Clairvoyant": "An Innocent who can see which players have special roles (something other than default Innocent, Traitor, or Detective) (labelled in purple) on the scoreboard.",
+    "Clairvoyant": "An Innocent who can see which players have special roles (something other than default Innocent, Traitor, or Detective) (labelled in purple) on the scoreboard. If the Clairvoyant kills the Jester, the Jester becomes their Sidekick, rather than winning.",
     "Beggar": "A Jester role who joins the team of any player who gives them an item purchased from their team's shop. Can deal no damage until then.",
     "Sacrifice": "An Innocent player who can interact with a body to sacrifice themself and revive the dead player."
 
