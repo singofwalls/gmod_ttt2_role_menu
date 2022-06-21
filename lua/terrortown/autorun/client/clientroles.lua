@@ -106,7 +106,7 @@ function write_roles()
     -- TODO: Display random convar value and min players convar value
     -- TODO: Teams, colors, shop access
     -- TODO: None role support
-    -- TODO: Put your role in its own panel so that it doesn't scroll of screen
+    -- TODO: Put your role in its own panel so that it doesn't scroll off screen
 end
 
 function getRoleStrs(roleName, role_info)
